@@ -2,7 +2,7 @@
 
 import _ from 'lodash';
 import printMe from './print';
-import './style.css';
+// import './style.css';
 import {cube} from './math';
 
 function component(){
@@ -23,6 +23,10 @@ function component(){
   // element.appendChild(btn);
 
   return element;
+}
+
+if(process.env.NODE_ENV !== 'production'){
+  console.log('Looks like we are in development mode!')
 }
 
 // document.body.appendChild(component());
